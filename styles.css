@@ -1,58 +1,37 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+.app-content {
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #6b48ff, #00ddeb);
 }
 
-.container {
-  max-width: 700px;
-  margin: 40px auto;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.btn-select {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #ffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.table-header {
-  background-color: #c5e17a;
-  padding: 15px 20px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.btn-select:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(27, 8, 8, 0.3);
 }
 
-.table-header .trash {
-  font-size: 20px;
-  cursor: pointer;
+.element {
+    text-decoration: none;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 15px;
-  text-align: left;
-}
-
-thead {
-  background-color: #f5f5f5;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  accent-color: #cbd5b2;
-}
