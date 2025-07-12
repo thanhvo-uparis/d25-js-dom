@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="table-header">
+            <span id="checked-count">0 Selected</span>
+            <span><i class="fa-solid fa-trash"></i></span>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="check-all" /></th>
+                    <th>Quốc gia</th>
+                    <th>Diện tích (km²)</th>
+                    <th>Dân số (người)</th>
+                    <th>GDP/người (USD)</th>
+                    <th>Thủ đô</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="row-checkbox"/></td>
+                        <td>Indonesia</td>
+                        <td>1.860.360</td>
+                        <td>255,461,700	</td>
+                        <td>3,511</td>
+                        <td>Jakarta</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="row-checkbox"/></td>
+                        <td>Myanmar</td>
+                        <td>676,578</td>
+                        <td>60,003,503</td>
+                        <td>571</td>
+                        <td>Naypyidaw</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="row-checkbox"/></td>
+                        <td>Việt Nam</td>
+                        <td>331.212</td>
+                        <td>100,000,000</td>
+                        <td>2,233</td>
+                        <td>Hà Nội</td>
+                    </tr>
+                </tr>
+            </tbody>
+                
+        </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
