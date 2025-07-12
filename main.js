@@ -11,12 +11,8 @@ console.log(checkRows);
 function uploadDisplay(arr) {
     // Đếm số checkbox được chọn
     const updateCheckedCount = () => {
-        let checkedCount = 0;
-        arr.forEach(cb => {
-            if (cb.checked) {
-                checkedCount += 1;
-            }
-        })
+        let checkedCount = Array.from(arr).filter(cb => cb.checked).length;
+        
         countSelected.textContent = `${checkedCount} Selected`;
     }
 
