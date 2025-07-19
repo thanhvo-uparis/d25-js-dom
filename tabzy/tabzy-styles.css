@@ -27,7 +27,7 @@
     border: none;
 }
 
-.btn-item.show {
+.btn-item.active {
     border-bottom: 2px solid black;
 }
 
@@ -42,6 +42,6 @@
     display: none;
 }
 
-.tab-content.show {
+.tab-content.active {
     display: block
 }
