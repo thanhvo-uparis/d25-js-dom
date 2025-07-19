@@ -41,14 +41,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: grey;
+    background: rgb(0, 0, 0, 0.6);
     opacity: 0;
     visibility: hidden;
+    transition: opacity, visibility;
+    transition-duration: 0.10s;
 }
 
 .modal-overlay.show {
     opacity: 1;
     visibility: visible;
+}
+
+.modal-overlay.show .modal {
+    transform: scale(1);
 }
 
  .modal {
@@ -57,6 +63,8 @@
     background: white;
     padding: 15px 25px;
     border-radius: 15px;
+    transform: scale(0);
+    transition: transform 0.3s;
 }
 
 .modal-header {
