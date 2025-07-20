@@ -1,5 +1,3 @@
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
 const tabs = document.querySelectorAll(".tabs-container");
 
 tabs.forEach(tab => {
@@ -25,4 +23,13 @@ tabs.forEach(tab => {
         item.addEventListener("click", () => activateTab(index));
     })
 
+    document.body.addEventListener("keydown", function(event) {
+        listItems.forEach((item) => {
+            const dataTab = item.dataset.tab;
+            if (event.key === dataTab) {
+                console.log(dataTab);
+                activateTab(dataTab-1)
+            }
+        })
+    })
 })
