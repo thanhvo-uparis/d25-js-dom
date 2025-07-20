@@ -4,44 +4,104 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    padding: 20px;
+}
+
 .tabs-container {
-    width: 450px;
-    height: 200px;
-    padding: 30px;
-    margin-left: 25%;
+    width: 600px;
+    max-width: 90%;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border: 1px solid;
-    border-radius: 25px;
 }
 
 .tab-items {
-    padding: 20px 25px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .btn-item {
-    background-color: #fff;
-    padding: 0 20px;
+    background: none;
     border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.btn-item:hover {
+    color: #007bff;
 }
 
 .btn-item.active {
-    border-bottom: 2px solid black;
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
 }
 
 .content {
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
+    width: 100%;
+    padding: 20px 0;
 }
 
 .tab-content {
-    padding: 20px;
     display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .tab-content.active {
-    display: block
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    opacity: 1;
+}
+
+.tab-content img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content-text {
+    flex: 1;
+}
+
+.content-text h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .tab-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-content img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
 }
