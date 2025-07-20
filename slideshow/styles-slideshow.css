@@ -5,6 +5,7 @@
 }
 
 .slideshow-container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,17 +34,25 @@
     transform: translateX(0);
 }
 
-/* .slide.exit {
-    transform: translateX(-100%);
-} */
-
 .slide img{
     object-fit: cover;
     height: 100%;
     width: 100%;
 }
 
-/* .controls {
-    position: relative;
-    height: 50%;
-} */
+.controls .btn-action{
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.btn-action.prev{
+    left: 0;
+}
+
+.btn-action.next{
+    right: 1px;
+}
+
