@@ -2,8 +2,9 @@ const slidesList = document.querySelectorAll(".slide");
 const btnList = document.querySelectorAll(".btn-action");
 const pagiDot =document.querySelector(".pagination");
 const dotsList = document.querySelectorAll(".dot");
-const inner = document.querySelector(".slide");
+const inner = document.querySelector(".inner");
 let currentSlide = 0;
+let autoplayInterval = null;
 
 function uploadSlide(index) {
     dotsList.forEach(slide => slide.classList.remove("active"));
@@ -36,3 +37,20 @@ dotsList.forEach((dot, index) => {
         }
     })
 })
+
+function nextSlide() {
+        currentSlide = (currentSlide + 1) % slidesList.length;
+        uploadSlide(currentSlide);
+}
+
+function startAutoplay() {
+        autoplayInterval = setInterval(nextSlide, 3000);
+}
+
+function stopAutoplay() {
+    clearInterval(autoplayInterval);
+}
+
+startAutoplay();
+inner.addEventListener("mouseenter", stopAutoplay);
+inner.addEventListener("mouseleave", startAutoplay);
