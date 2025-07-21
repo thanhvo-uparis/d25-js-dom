@@ -33,6 +33,7 @@ dotsList.forEach((dot, index) => {
     dot.addEventListener("click", function(event) {
         const dotSelected = event.target.closest(".dot");
         if (dotSelected) {
+            currentSlide = index;
             uploadSlide(index);
         }
     })
